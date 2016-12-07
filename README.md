@@ -3,19 +3,21 @@ originr
 
 
 
-[![Build Status](https://travis-ci.org/ropenscilabs/originr.svg?branch=master)](https://travis-ci.org/ropenscilabs/originr)
-[![codecov.io](https://codecov.io/github/ropenscilabs/originr/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/originr?branch=master)
+[![Build Status](https://travis-ci.org/ropensci/originr.svg?branch=master)](https://travis-ci.org/ropensci/originr)
+[![codecov.io](https://codecov.io/github/ropensci/originr/coverage.svg?branch=master)](https://codecov.io/github/ropensci/originr?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/originr)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/originr)](https://cran.r-project.org/package=originr)
 
 Species Origin Data
 
 Data sources:
 
-* Encyclopedia of Life [http://eol.org](http://eol.org)
-* Flora Europaea [http://rbg-web2.rbge.org.uk/FE/fe.html](http://rbg-web2.rbge.org.uk/FE/fe.html)
-* Global Invasive Species Database [http://www.iucngisd.org/gisd](http://www.iucngisd.org/gisd)
-* Native Species Resolver [http://bien.nceas.ucsb.edu/bien/tools/nsr/nsr-ws/](http://bien.nceas.ucsb.edu/bien/tools/nsr/nsr-ws/)
-* Integrated Taxonomic Information Service [http://www.itis.gov/](http://www.itis.gov/)
+* Encyclopedia of Life <http://eol.org>
+* Flora Europaea <http://rbg-web2.rbge.org.uk/FE/fe.html>
+* Global Invasive Species Database <http://www.iucngisd.org/gisd>
+* Native Species Resolver <http://bien.nceas.ucsb.edu/bien/tools/nsr/nsr-ws/>
+* Integrated Taxonomic Information Service <http://www.itis.gov/>
+* Global Register of Introduced and Invasive Species <http://www.griis.org/>
 
 ## Install
 
@@ -30,7 +32,7 @@ Development version
 
 
 ```r
-devtools::install_github("ropenscilabs/originr")
+devtools::install_github("ropensci/originr")
 ```
 
 
@@ -43,15 +45,15 @@ library("originr")
 Datasets included:
 
 * `gisd100` - 100 of the World's Worst Invasive Alien Species
-(Global Invasive Species Database) [http://eol.org/collections/54500](http://eol.org/collections/54500)
-* `gisd` - Global Invasive Species Database 2013 [http://eol.org/collections/54983](http://eol.org/collections/54983)
+(Global Invasive Species Database) <http://eol.org/collections/54500>
+* `gisd` - Global Invasive Species Database 2013 <http://eol.org/collections/54983>
 * `isc` - Centre for Agriculture and Biosciences International Invasive Species
-Compendium (ISC) [http://eol.org/collections/55180](http://eol.org/collections/55180)
+Compendium (ISC) <http://eol.org/collections/55180>
 * `daisie` - Delivering Alien Invasive Species Inventories for Europe (DAISIE) Species
-List [http://eol.org/collections/55179](http://eol.org/collections/55179)
+List <http://eol.org/collections/55179>
 * `i3n` - IABIN Invasives Information Network (I3N) Species
 http://eol.org/collections/55176
-* `mineps` - Marine Invaders of the NE Pacific Species [http://eol.org/collections/55331](http://eol.org/collections/55331)
+* `mineps` - Marine Invaders of the NE Pacific Species <http://eol.org/collections/55331>
 
 An example using `mineps`
 
@@ -134,7 +136,7 @@ flora_europaea("Lavandula stoechas")
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/originr/issues).
+* Please [report any issues or bugs](https://github.com/ropensci/originr/issues).
 * License: MIT
 * Get citation information for `originr` in R doing `citation(package = 'originr')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
