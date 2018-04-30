@@ -3,9 +3,9 @@ context("eol functions")
 test_that("eol works", {
   skip_on_cran()
 
-  aa <- eol(name = 'Brassica oleracea', dataset = 'gisd', verbose = FALSE)
-  bb <- eol(name = 'Ciona intestinalis', dataset = 'mineps', verbose = FALSE)
-  cc <- eol(name = c('Lymantria dispar','Cygnus olor'), dataset = 'i3n', verbose = FALSE)
+  aa <- eol(name = 'Brassica oleracea', dataset = 'gisd', messages = FALSE)
+  bb <- eol(name = 'Ciona intestinalis', dataset = 'mineps', messages = FALSE)
+  cc <- eol(name = c('Lymantria dispar','Cygnus olor'), dataset = 'i3n', messages = FALSE)
 
   expect_is(aa, "data.frame")
   expect_equal(aa$searched_name, 'Brassica oleracea')
@@ -26,5 +26,6 @@ test_that("eol works", {
 test_that("fails well", {
   skip_on_cran()
 
-  expect_error(eol(), "please provide a taxonomic name")
+  expect_error(eol(), "argument \"name\" is missing")
+  expect_error(eol(""), "'name' must be longer than 0 characters")
 })

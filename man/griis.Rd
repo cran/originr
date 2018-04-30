@@ -5,7 +5,7 @@
 \title{Check invasive species status for a species from GRIIS database}
 \usage{
 griis(name = NULL, impacts = NULL, verified = NULL, country = NULL,
-  kindom = NULL, type = NULL)
+  kindom = NULL, type = NULL, ...)
 }
 \arguments{
 \item{name}{character; a string with the scientific species name in the
@@ -27,10 +27,12 @@ results. Default to NULL: return all records.}
 \item{type}{character containing a valid name of a environment type
 (terrestrial, freshwater, marine, brackish, host) for which to filter
 the results. Default to NULL: return all records.}
+
+\item{...}{curl options passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A data.frame with species names, country where recorded,
-   origin and source among other fields.
+origin and source among other fields.
 }
 \description{
 This retrieves information from GRIIS (http://www.griis.org/)
@@ -39,7 +41,7 @@ function is as good as the database is.
 }
 \note{
 It seems as 'name' overrides 'kindom', which means records from a
-   a plant species will be returned even if kindom is set to animalia.
+a plant species will be returned even if kindom is set to animalia.
 }
 \examples{
 \dontrun{
@@ -51,4 +53,3 @@ griis(name = "Carpobrotus edulis", country = "Portugal")
 \author{
 Ignasi Bartomeus \email{nacho.bartomeus@gmail.com}
 }
-

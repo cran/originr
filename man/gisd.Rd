@@ -4,7 +4,7 @@
 \alias{gisd}
 \title{Check invasive species status for a set of species from GISD database}
 \usage{
-gisd(x, simplify = FALSE, verbose = TRUE)
+gisd(x, simplify = FALSE, messages = TRUE, ...)
 }
 \arguments{
 \item{x}{character; a vector of scientific species names in the form of
@@ -15,7 +15,10 @@ values "Invasive", "Not in GISD". I recomend to check first the not
 simplified version (default), which contains raw information about the
 level of invasiveness.}
 
-\item{verbose}{logical; If TRUE (default), informative messages printed.}
+\item{messages}{logical; If \code{TRUE} (default), informative messages
+printed.}
+
+\item{...}{curl options passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A list with species names, native range countries, and invasive
@@ -38,10 +41,9 @@ reliable and well maintained.
 The database is also able to recognize a lot (but not all) of the species
 synonyms.
 
-Note that \code{eol_invasive} with source of gisd or gisd100 may end up with
+Note that \code{\link{eol}} with source of gisd or gisd100 may end up with
 different results as this function goes directly to the GISD website, whereas
-eol_invasive only updates their GISD data occassionally. See notes in
-\code{eol_invasive}.
+EOL only updates their GISD data occassionally. See notes in \code{\link{eol}}.
 }
 \examples{
 \dontrun{
@@ -59,4 +61,3 @@ gisd(sp, simplify = TRUE)
 \author{
 Ignasi Bartomeus \email{nacho.bartomeus@gmail.com}
 }
-

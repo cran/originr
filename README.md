@@ -17,7 +17,7 @@ Data sources:
 * Global Invasive Species Database <http://www.iucngisd.org/gisd>
 * Native Species Resolver <http://bien.nceas.ucsb.edu/bien/tools/nsr/nsr-ws/>
 * Integrated Taxonomic Information Service <http://www.itis.gov/>
-* Global Register of Introduced and Invasive Species <http://www.griis.org/>
+* Global Register of Introduced and Invasive Species http://www.griis.org/
 
 ## Install
 
@@ -139,6 +139,6 @@ flora_europaea("Lavandula stoechas")
 * Please [report any issues or bugs](https://github.com/ropensci/originr/issues).
 * License: MIT
 * Get citation information for `originr` in R doing `citation(package = 'originr')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

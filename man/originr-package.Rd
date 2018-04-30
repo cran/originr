@@ -2,8 +2,8 @@
 % Please edit documentation in R/originr-package.R
 \docType{package}
 \name{originr-package}
-\alias{originr}
 \alias{originr-package}
+\alias{originr}
 \title{originr - Species Origin Data}
 \description{
 originr - Species Origin Data
@@ -11,17 +11,17 @@ originr - Species Origin Data
 \section{Data sources in the package}{
 
 \itemize{
- \item Encyclopedia of Life (http://eol.org)
- \item Flora Europaea (http://rbg-web2.rbge.org.uk/FE/fe.html)
- \item Global Invasive Species Database (http://www.iucngisd.org/gisd)
- \item Native Species Resolver (http://bien.nceas.ucsb.edu/bien/tools/nsr/nsr-ws/)
- \item Integrated Taxonomic Information Service (http://www.itis.gov/)
+\item Encyclopedia of Life (http://eol.org)
+\item Flora Europaea (http://rbg-web2.rbge.org.uk/FE/fe.html)
+\item Global Invasive Species Database (http://www.iucngisd.org/gisd)
+\item Native Species Resolver (http://bien.nceas.ucsb.edu/bien/tools/nsr/nsr-ws/)
+\item Integrated Taxonomic Information Service (http://www.itis.gov/)
 }
 }
+
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 
 Ignasi Bartomeus \email{nacho.bartomeus@gmail.com}
 }
 \keyword{package}
-

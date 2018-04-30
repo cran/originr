@@ -17,7 +17,7 @@
 #' "USSR", "Sardegna", "Svalbard", "Sicilia", "Sweden", "Turkey", "USSR_Northern_Division",
 #' "USSR_Baltic_Division", "USSR_Central_Division", "USSR_South_western", "USSR_Krym",
 #' "USSRSouth_eastern_Division"
-#' @param ... Curl options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to \code{\link[crul]{HttpClient}}
 #' @return A data.frame, with species name and result of origin check
 #'
 #' @description This function check the status (native or exotic) of a species in a
@@ -59,10 +59,11 @@ is_native <- function(sp, where, region = c("america", "europe"), ...) {
       Out <- "species not in itis"
     } else {
       origin <- taxize::itis_native(tsn = tsn_, ...)
-      if(is.na(origin$origin)){
+      if (all(is.na(origin$origin))) {
         Out <- "species with no available origin in itis"
       } else {
-        Out <- as.character(origin[which(origin$jurisdictionvalue == where), "origin"])
+        Out <- origin[which(origin$jurisdictionvalue == where), "origin"][[1]]
+        if (length(Out) == 0) Out <- NA_character_
       }
     }
   }
